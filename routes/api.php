@@ -34,7 +34,6 @@ Route::group(['middleware' => ["auth:sanctum"]], function() {
 Route::get('clubes', [ClubController::class,'index']);
 Route::post('cadastrar_clube', [ClubController::class,'criarClube']);
 Route::put('clubes/{id}', [ClubController::class,'update']);
-Route::delete('clubes/{id}', [ClubController::class,'destroy']);
 
 // Soft Delete apagar clube
 Route::get('apagar_clube/{id}', [ClubController::class, 'removerClub']);
