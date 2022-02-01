@@ -24,7 +24,7 @@ Você pode verificar todas as dependências relacionadas ao laravel [aqui](https
 ## Instalação.
 
 1. Clone o repositório e instalação.<br>
-`git clone github.com/jacksonsns/Club_api_rest.git`<br>
+`git clone https://github.com/jacksonsns/Club_api_rest.git`<br>
 `cd Club_api_rest`<br>
 `cp .env.example .env`<br>
 2. Suba os containers.<br>
