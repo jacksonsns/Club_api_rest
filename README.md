@@ -65,4 +65,9 @@ Você pode verificar todas as dependências relacionadas ao laravel [aqui](https
     | PUT       | api/fatura/pagar/{id}      | fatura.pay      |
     +-----------+----------------------------+-----------------+
     ```
+## Recursos extras
 
+Essa sistema utiliza o scheduled tasks do Laravel para gerenciar emissão de faturas e verificação de inadimplência.
+Para isso, basta executar o seguinte comando:
+
+`php artisan schedule:run`
