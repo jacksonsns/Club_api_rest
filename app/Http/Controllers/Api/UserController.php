@@ -75,9 +75,7 @@ class UserController extends Controller
         
         $user = User::where("email", "=", $request->email)->first();
 
-        if(isset($user->id)) {
-
-            if(Hash::check($request->password, $user->password)) {
+            if(isset($user->id) && Hash::check($request->password, $user->password)) {
 
                 $token = $user->createToken("auth_token")->plainTextToken;
 
@@ -93,12 +91,7 @@ class UserController extends Controller
                     "msg" => "Email ou senha incorretos!"
                 ]);
             }
-        } else {
-            return response()->json([
-                "status" => 0,
-                "msg" => "Usuário não registrado"
-            ]);
-        }
+        
     }
 
     public function userProfile() {
