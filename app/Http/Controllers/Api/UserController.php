@@ -85,19 +85,19 @@ class UserController extends Controller
                     "status" => 1,
                     "msg" => "Usuário logado com sucesso!",
                     "access_token" => $token
-                ], 201);
+                ]);
 
             } else {
                 return response()->json([
                     "status" => 0,
                     "msg" => "Email ou senha incorretos!"
-                ], 404);
+                ]);
             }
         } else {
             return response()->json([
                 "status" => 0,
                 "msg" => "Usuário não registrado"
-            ], 404);
+            ]);
         }
     }
 
@@ -105,7 +105,7 @@ class UserController extends Controller
 
         $user = auth()->user();
 
-        $clubsAsParticipant = $user->clubsAsParticipant;
+        $user->clubsAsParticipant;
 
         return response()->json([
             "data" => $user
@@ -119,7 +119,7 @@ class UserController extends Controller
         return response()->json([
             "status" => 1,
             "msg" => "Usuário deslogado com sucesso!"
-        ], 201);
+        ]);
     }
 
 }
