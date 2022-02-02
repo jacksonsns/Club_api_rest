@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('cpf')->unique();
             $table->date('birth_date');
-            $table->date('dia_de_vencimento');
+            $table->integer('dia_de_vencimento');
             $table->enum('status', ['inativo','ativo', 'inadimplente'])->default('inativo');
             $table->softDeletes();
             $table->timestamps();
