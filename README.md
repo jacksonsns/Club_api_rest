@@ -86,7 +86,7 @@ REDIS_PORT=6379
     | PUT       | api/fatura/pagar/{id}      | fatura.pay      |
     +-----------+----------------------------+-----------------+
     ```
-## Recursos extras
+## Schedule
 
 Esse sistema utiliza o scheduled tasks do Laravel para gerenciar emissão de faturas e verificação de inadimplência.
 Para isso, basta executar o seguinte comando:
